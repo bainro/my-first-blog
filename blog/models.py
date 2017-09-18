@@ -11,6 +11,8 @@ class Post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
+    alt_text = models.CharField(max_length=80, blank=True, null= True)
+    thumbnail_path = models.CharField(max_length=100,blank=True, null=True, default=None)
 
     def publish(self):
         self.published_date = timezone.now()
