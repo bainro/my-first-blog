@@ -75,6 +75,7 @@ h1, h2, h3, h4 {
 
 .post-thumbnail {
 	max-width: 35vw;
+	max-height: 35vw;
 	float: right;
     margin-left: .5em;
 }
