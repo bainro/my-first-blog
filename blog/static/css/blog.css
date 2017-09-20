@@ -83,7 +83,6 @@ h1, h2, h3, h4 {
 
 .post-image {
 	max-width: 100%;
-	margin-bottom: 1em;
 }
 
 .add-comment-btn {
@@ -93,6 +92,7 @@ h1, h2, h3, h4 {
 p {
 	font-size: 2em;
 	font-family: bookman;
+	margin: 10px 0;
 }
 
 body {
