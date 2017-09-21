@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, Caption
 
 class TinyMCEAdmin(admin.ModelAdmin):
 	class Media: 
@@ -7,3 +7,4 @@ class TinyMCEAdmin(admin.ModelAdmin):
 
 admin.site.register(Post, TinyMCEAdmin)
 admin.site.register(Comment)
+admin.site.register(Caption)

@@ -75,14 +75,15 @@ h1, h2, h3, h4 {
 }
 
 .post-thumbnail {
-	max-width: 35vw;
-	max-height: 130px;
-	float: right;
-    margin-left: .5em;
+	max-width: 100%;
+    border-radius: 50px 0;
+	/*max-height: 230px;*/
 }
 
 .post-image {
 	max-width: 100%;
+	border-radius: 50px 0;
+	transition: border-bottom-right-radius .5s;
 }
 
 .add-comment-btn {
@@ -90,7 +91,7 @@ h1, h2, h3, h4 {
 }
 
 p {
-	font-size: 1.4em;
+	font-size: 1.3em;
 	font-family: bookman;
 	margin: 10px 0;
 }
@@ -102,3 +103,30 @@ body {
 .comments-text {
 	color: #877;
 }
+
+a:hover>.post-image {
+    border-bottom-right-radius: 0;
+}
+
+.a-captions {
+	position: relative;
+	display: inline-block;
+}
+
+[class*="span-captions"] {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    /*border-radius: 50px;*/
+}
+
+a:hover [class*="span-captions"] {
+	display: block;
+}
+
+/*a:hover .span-captions:before {
+	color:yellow;
+	content:"BANANA";
+}*/

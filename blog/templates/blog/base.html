@@ -9,6 +9,22 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <style>
+            {% if posts|length == 0 %}
+                {% for caption in post.caption.all %}
+
+                a:hover .span-captions{{forloop.counter}}:before {
+                    content:"{{caption}}";
+                    color: rgba({{caption.color}},1);
+                }
+
+                .span-captions{{forloop.counter}} {
+                    background: rgba({{caption.backcolor}},.4);
+                }
+
+                {% endfor %}
+            {% endif %}
+        </style>
     </head>
     <body>
         <div class="page-header">

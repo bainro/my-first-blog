@@ -37,3 +37,13 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
+
+class Caption(models.Model):
+    post = models.ForeignKey('blog.Post', related_name='caption')
+    caption = models.CharField(max_length=300)
+    order = models.IntegerField(blank=True, null=True, default=None)
+    color = models.CharField(max_length = 15, default='255,255,255')
+    backcolor = models.CharField(max_length = 15, default='0,0,0')
+
+    def __str__(self):
+        return self.caption

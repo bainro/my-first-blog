@@ -8,13 +8,15 @@
                 {{ post.published_date }}
             </div>
             {% if post.thumbnail_path %}
-            <picture>
-                <!--<source media="(min-width: 850px)" srcset="images/minecraft-1000_large_2x.jpg 2x, images/minecraft-500_large_1x.jpg">
-                <source srcset="images/minecraft-600_small_3x.jpg 3x, images/minecraft-400_small_2x.jpg 2x, images/minecraft-200_small_1x.jpg">-->
-                <img src="{{ post.thumbnail_path }}.jpg" class="post-thumbnail" alt="{{ post.alt_text }}">
-            </picture>
+            <a href="{% url 'post_detail' pk=post.pk %}">
+                <picture>
+                    <!--<source media="(min-width: 850px)" srcset="images/minecraft-1000_large_2x.jpg 2x, images/minecraft-500_large_1x.jpg">
+                    <source srcset="images/minecraft-600_small_3x.jpg 3x, images/minecraft-400_small_2x.jpg 2x, images/minecraft-200_small_1x.jpg">-->
+                    <img class="post-thumbnail" src="{{ post.thumbnail_path }}.jpg" alt="{{ post.alt_text }}">
+                </picture>
+            </a>
             {% endif %}
-            <p>{{ post.text|striptags|linebreaksbr }}</p>
+            <p>{{ post.text|striptags|linebreaks|truncatewords:100 }}</p>
             <p class="comments-text">Comments: {{ post.approved_comments.count }} <p>
         </div>
     {% endfor %}
