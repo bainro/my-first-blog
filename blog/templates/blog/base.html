@@ -14,7 +14,7 @@
                 {% for caption in post.caption.all %}
 
                 a:hover .span-captions{{forloop.counter}}:before {
-                    content:"{{caption}}";
+                    content:"{{caption|safe}}";
                     color: rgba({{caption.color}},1);
                 }
 
