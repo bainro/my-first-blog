@@ -2,8 +2,17 @@
     background-color: #ff9400;
     margin-top: 0;
     margin-bottom: 0;
+    transition: box-shadow 2s;
     padding: 20px 20px 20px 20px;
-    border: 1px solid #000;
+    box-shadow: 0px 0px 20px 2px rgba(0,0,0,.4) inset;
+}
+
+.page-header:hover>#blog-title {
+    text-shadow: 3px 3px 2px rgba(0,0,0,1);
+}
+
+.page-header:hover {
+    box-shadow: none;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -13,7 +22,7 @@
 }
 
 .content {
-    
+
 }
 
 #header {
@@ -59,6 +68,7 @@ h1, h2, h3, h4 {
 }
 
 #blog-title {
+	transition: text-shadow 1s;
 	margin: 15px 0;
 	text-align: center;
 	text-shadow: 3px 3px 4px rgba(0,0,0,0.7);
@@ -76,14 +86,14 @@ h1, h2, h3, h4 {
 
 .post-thumbnail {
 	max-width: 100%;
-    border-radius: 50px 0;
+    border-radius: 50px 5px;
 	max-height: 320px;
 }
 
 .post-image {
 	max-width: 100%;
 	max-height: 320px;
-	border-radius: 50px 0;
+	border-radius: 50px 5px;
 	transition: border-bottom-right-radius .5s;
 }
 
@@ -130,7 +140,86 @@ a:hover [class*="span-captions"] {
 	display: block;
 }
 
-/*a:hover .span-captions:before {
-	color:yellow;
-	content:"BANANA";
-}*/
+@media screen and (min-width: 455px){
+	.page-header{
+		padding:20px 96px;
+	}
+}
+
+@media screen and (min-width: 500px){
+	p{
+		font-size: 1.8em;
+	}
+	[class*="span-captions"] {
+		font-size: .7em;
+		font-family:Tahoma;
+	}
+}
+
+@media screen and (min-width: 600px){
+	.page-header{
+		padding:20px 44px;
+	}
+}
+
+@media screen and (min-width: 650px){
+	p,.page-header{
+		font-size: 2.1em;
+	}
+}
+
+@media screen and (orientation:portrait) and (min-width:800px){
+	.post-image{
+		max-height: 600px;
+	}
+	.post-thumbnail{
+		max-height: 600px;
+	}
+}
+
+@media screen and (orientation:landscape) and (min-width:800px){
+	.post-image{
+		max-height: 400px;
+	}
+	.post-thumbnail{
+		max-height: 400px;
+	}
+}
+
+@media screen and (orientation:landscape) and (min-width:900px){
+	.post-image{
+		max-height: 480px;
+	}
+	.post-thumbnail{
+		max-height: 480px;
+	}
+}
+
+@media screen and (orientation:landscape) and (min-width:1000px){
+	.post-image{
+		max-height: 560px;
+	}
+	.post-thumbnail{
+		max-height: 560px;
+	}
+}
+
+@media screen and (orientation:landscape) and (min-width:1100px){
+	.post-image{
+		max-height: 640px;
+	}
+	.post-thumbnail{
+		max-height: 640px;
+	}
+}
+
+
+@media screen and (orientation:landscape) and (min-width:1200px){
+	.post-image{
+		max-height: 720px;
+	}
+	.post-thumbnail{
+		max-height: 720px;
+	}
+}
+
