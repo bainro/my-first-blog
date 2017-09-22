@@ -10,9 +10,10 @@
             {% if post.thumbnail_path %}
             <a href="{% url 'post_detail' pk=post.pk %}">
                 <picture>
-                    <!--<source media="(min-width: 850px)" srcset="images/minecraft-1000_large_2x.jpg 2x, images/minecraft-500_large_1x.jpg">
-                    <source srcset="images/minecraft-600_small_3x.jpg 3x, images/minecraft-400_small_2x.jpg 2x, images/minecraft-200_small_1x.jpg">-->
-                    <img class="post-thumbnail" src="{{ post.thumbnail_path }}.jpg" alt="{{ post.alt_text }}">
+                    <source media="(min-width: 900px)" srcset="{{post.thumbnail_path}}-1700_large_2x.jpg 2x, {{post.thumbnail_path}}-850_large_1x.jpg">
+                    <source media="(min-width: 650px)" srcset="{{post.thumbnail_path}}-1800_mediun_3x.jpg 3x, {{post.thumbnail_path}}-1200_medium_2x.jpg 2x, {{post.thumbnail_path}}-600_mediun_1x.jpg">
+                    <source srcset="{{post.thumbnail_path}}-380_small_1x.jpg, {{post.thumbnail_path}}-760_small_2x.jpg 2x, {{post.thumbnail_path}}-1140_small_3x.jpg 3x">
+                    <img class="post-thumbnail" src="{{ post.thumbnail_path }}-1140_small_3x.jpg" alt="{{ post.alt_text }}">
                 </picture>
             </a>
             {% endif %}

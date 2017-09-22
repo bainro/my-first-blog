@@ -117,7 +117,7 @@ body {
 	color: #877;
 }
 
-a:hover>.post-image {
+a:hover>*>.post-image {
     border-bottom-right-radius: 0;
 }
 
