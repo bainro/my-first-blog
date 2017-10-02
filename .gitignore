@@ -3,5 +3,10 @@
 __pycache__
 myvenv
 db.sqlite3
-/static
 .DS_Store
+
+scss
+.sass-cache
+images
+videos
+*.map
